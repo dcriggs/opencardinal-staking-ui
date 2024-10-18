@@ -23,7 +23,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
-  @apply bg-gray-900;
+  background-color: #65cfc7; /* Change the background color here */
   color: #fff;
 }
 

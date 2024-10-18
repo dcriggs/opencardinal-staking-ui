@@ -30,7 +30,7 @@ export const TokenStatNextRewardBadge = ({
       }) && (
         <Badge className={className}>
           <div className="text-xs">🎁</div>
-          <div>
+          <div className="text-white">
             <TokenStatNextRewardValue tokenData={tokenData} />
           </div>
         </Badge>

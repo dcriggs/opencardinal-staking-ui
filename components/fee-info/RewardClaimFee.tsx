@@ -27,7 +27,7 @@ export const RewardClaimFee: React.FC = () => {
         stakePool?.data?.parsed &&
         (isStakePoolV2(stakePool.data.parsed) ? (
           claimRewardsPaymentInfo.data && (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 text-white">
               <TagIcon className="h-5 w-5 text-medium-4" />
               <div className="text-medium-4">Reward Claim Fee: </div>
               <div>

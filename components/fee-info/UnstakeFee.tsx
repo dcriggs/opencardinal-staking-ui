@@ -26,7 +26,7 @@ export const UnstakeFee: React.FC = () => {
       {!!stakePool.isFetched &&
         stakePool?.data?.parsed &&
         isStakePoolV2(stakePool.data.parsed) && (
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-white">
             <ArrowUpOnSquareIcon className="h-5 w-5 text-medium-4" />
             <div className="text-medium-4">Unstake Fee:</div>
             <div>

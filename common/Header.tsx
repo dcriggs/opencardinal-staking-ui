@@ -42,20 +42,12 @@ export const Header = () => {
             rel="noreferrer"
           >
             {stakePoolMetadata?.secondaryImageUrl && (
-              <div className="ml-2 flex flex-row">
+              <div className="ml-2 flex justify-center">
                 <img
-                  className="flex h-[35px] flex-col"
+                  className="flex h-[225px] w-full object-cover"
                   src={stakePoolMetadata?.secondaryImageUrl}
                   alt={stakePoolMetadata?.secondaryImageUrl}
                 />
-                {stakePoolMetadata.nameInHeader && (
-                  <span
-                    className="ml-5 mt-1 flex flex-col"
-                    style={{ color: stakePoolMetadata?.colors?.fontColor }}
-                  >
-                    {stakePoolMetadata?.displayName}
-                  </span>
-                )}
               </div>
             )}
           </a>

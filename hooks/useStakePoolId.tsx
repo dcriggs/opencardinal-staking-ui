@@ -1,25 +1,12 @@
-import { tryPublicKey } from '@cardinal/common'
-import { PublicKey } from '@solana/web3.js'
-import { useQuery } from '@tanstack/react-query'
-import { useRouter } from 'next/router'
-import { useStakePoolMetadataCtx } from 'providers/StakePoolMetadataProvider'
+import { PublicKey } from '@solana/web3.js';
+import { useQuery } from '@tanstack/react-query';
+
+// Hardcode "pixelapes" pool ID
+const PIXELAPES_POOL_ID = '5kUaKCD3EJ9xuXyUCM3ugzg1iGHA9i4AFyCqdSayvMuC';  // Replace with the actual public key
 
 export const useStakePoolId = () => {
-  const stakePoolMetadata = useStakePoolMetadataCtx()
-  const {
-    query: { stakePoolId },
-  } = useRouter()
-
   return useQuery(
-    [
-      'useStakePoolId',
-      stakePoolId?.toString(),
-      stakePoolMetadata.data?.stakePoolAddress.toString(),
-    ],
-    async () => {
-      if (stakePoolMetadata.data)
-        return new PublicKey(stakePoolMetadata.data.stakePoolAddress)
-      return tryPublicKey(stakePoolId) ?? null
-    }
-  )
-}
+    ['useStakePoolId', PIXELAPES_POOL_ID],
+    async () => new PublicKey(PIXELAPES_POOL_ID)
+  );
+};
