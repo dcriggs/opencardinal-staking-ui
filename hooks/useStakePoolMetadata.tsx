@@ -40,11 +40,19 @@ export const stakePoolConfig = async (
 
   if (reverseConfigEntryData?.parsed) {
     const configEntryId = reverseConfigEntryData.parsed.extends[0];
-    const configEntryData = await getConfigEntryById(connection, configEntryId);
-    if (configEntryData?.parsed) {
-      return JSON.parse(configEntryData.parsed.value); // Return the fetched metadata
+
+    // Ensure configEntryId is defined and of type PublicKey
+    if (configEntryId) {
+      const configEntryData = await getConfigEntryById(connection, configEntryId);
+      if (configEntryData?.parsed) {
+        return JSON.parse(configEntryData.parsed.value); // Return the fetched metadata
+      }
+    } else {
+      // Handle the case where configEntryId is undefined
+      console.error("configEntryId is undefined");
+      // Optionally return or throw an error here
     }
-  }
+  }  
 
   return null;
 };

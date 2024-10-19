@@ -17,7 +17,7 @@ export function StakePoolMetadataProvider({
   children: React.ReactChild
   hostname: string
 }) {
-  const stakePoolMetadata = useStakePoolMetadata(hostname)
+  const stakePoolMetadata = useStakePoolMetadata()
 
   return (
     <StakePoolMetadataContext.Provider value={{ stakePoolMetadata }}>
