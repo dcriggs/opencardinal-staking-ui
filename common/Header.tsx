@@ -41,15 +41,6 @@ export const Header = () => {
             className="flex cursor-pointer text-xl font-semibold"
             rel="noreferrer"
           >
-            {stakePoolMetadata?.secondaryImageUrl && (
-              <div className="ml-2 flex justify-center">
-                <img
-                  className="flex h-[225px] w-full object-cover"
-                  src={stakePoolMetadata?.secondaryImageUrl}
-                  alt={stakePoolMetadata?.secondaryImageUrl}
-                />
-              </div>
-            )}
           </a>
           {environment.label !== 'mainnet-beta' && (
             <div className="cursor-pointer rounded-md bg-[#9945ff] p-1 text-[10px] italic text-white">
@@ -96,12 +87,12 @@ export const Header = () => {
             />
           ) : (
             <ButtonSmall
-              className="text-xs"
+              className="transform rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-6 py-3 text-lg font-bold text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-l hover:from-pink-500 hover:to-indigo-500"
               onClick={() => walletModal.setVisible(true)}
             >
               <>
                 <GlyphWallet />
-                <div className="text-white">Connect wallet</div>
+                <div className="text-white">Connect Wallet</div>
               </>
             </ButtonSmall>
           )}

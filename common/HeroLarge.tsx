@@ -28,19 +28,14 @@ export const HeroLarge: React.FC = () => {
       />
       <StakePoolImage />
       <div className="flex w-3/4 grow-[2] flex-col pt-4">
-        <div className="mb-6 flex flex-col gap-6">
+        <div className="mb-6 flex flex-col gap-6 stakinginfo">
           <div
             className="text-4xl text-light-0"
             style={{ color: config?.colors?.fontColor }}
           >
             {config?.displayName ?? shortPubKey(stakePoolId)}
           </div>
-          <div className="text-lg text-medium-3">
-            {config?.description ??
-              `Stake your token(s) to earn rewards from various reward mechanisms including tokens, merchandise, redeemable rewards by the ${
-                config?.displayName ?? shortPubKey(stakePoolId)
-              } pool.`}
-          </div>
+
           <StakePoolConfig />
           <FeeInfo />
         </div>

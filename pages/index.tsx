@@ -1,5 +1,4 @@
 import { tryColor } from 'common/colors'
-import { Footer } from 'common/Footer'
 import { FooterSlim } from 'common/FooterSlim'
 import { Header } from 'common/Header'
 import { HeroLarge } from 'common/HeroLarge'
@@ -135,12 +134,9 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
 
   return (
     <div
-      className="flex min-h-screen flex-col"
+      className="flex min-h-screen flex-col bg-cover bg-center bg-no-repeat"
       style={{
         background: tryColor(stakePoolMetadata?.colors?.primary),
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
         backgroundImage: `url(${stakePoolMetadata?.backgroundImage})`,
       }}
     >
@@ -168,7 +164,7 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
       </Head>
       <Header />
       <div
-        className="relative z-0 mx-10 mt-4 mb-8 flex flex-col gap-4"
+        className="relative z-0 mx-10 my-6 flex flex-col gap-6 text-xl"
         style={{
           ...stakePoolMetadata?.styles,
           color:
@@ -178,9 +174,10 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
             )[0],
         }}
       >
+        <div className="hero" />
         <HeroLarge />
         <AttributeAnalytics />
-        <div className="flex justify-end">
+        <div className="flex justify-end mb-4 space-x-4">
           <TabSelector<PANE_OPTIONS>
             colors={{
               background: stakePoolMetadata?.colors?.backgroundSecondary,
@@ -224,11 +221,6 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
           }[pane]
         }
       </div>
-      {!stakePoolMetadata?.hideFooter ? (
-        <Footer bgColor={tryColor(stakePoolMetadata?.colors?.primary)} />
-      ) : (
-        <div className="h-24"></div>
-      )}
     </div>
   )
 }

@@ -6,7 +6,6 @@ import { UnstakeFee } from '@/components/fee-info/UnstakeFee'
 export const FeeInfo: React.FC = () => {
   return (
     <div className="flex flex-wrap gap-4">
-      <PoolVersionIndicator />
       <RewardClaimFee />
       <StakeFee />
       <UnstakeFee />

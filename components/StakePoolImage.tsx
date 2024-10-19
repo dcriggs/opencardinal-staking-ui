@@ -6,7 +6,7 @@ export const StakePoolImage = ({ onClick }: { onClick?: () => void }) => {
   return config?.imageUrl ? (
     <div className="relative flex w-1/4 grow items-center justify-center rounded-xl">
       <img
-        className={`max-h-[200px] w-auto rounded-xl ${
+        className={`max-h-[320px] w-auto rounded-xl ${
           config?.logoPadding && 'p-8'
         }`}
         src={config?.imageUrl}

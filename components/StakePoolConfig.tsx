@@ -46,7 +46,7 @@ export const StakePoolConfig: React.FC<
           >
             <div className="flex cursor-pointer flex-row items-center justify-center gap-2">
               <BsFillInfoCircleFill className="text-medium-4" />
-              <div className="text-medium-4">Minimum Stake Seconds: </div>
+              <div className="text-medium-4">Minimum Stake Period: </div>
               <div className="text-light-1">
                 {secondstoDuration(stakePool?.parsed.minStakeSeconds)}{' '}
               </div>
