@@ -6,7 +6,7 @@ import type { StakePoolMetadata } from 'helpers/mapping';
 import { useEnvironmentCtx } from 'providers/EnvironmentProvider';
 
 // Hardcode the PublicKey for the "pixelapes" pool
-const PIXELAPES_STAKE_POOL_ID = 'EQuYvFtX7FsWTkRDB1bCowMMTDTeQQ1XSLSD2qXbYZNo'; // Replace with actual public key
+const PIXELAPES_STAKE_POOL_ID = 'E6Svu8eQyb7k8Z3KEn4RELDXDJSYws13pdbnX82xBke'; // Replace with actual public key
 
 export const useStakePoolMetadata = () => {
   const { connection } = useEnvironmentCtx();

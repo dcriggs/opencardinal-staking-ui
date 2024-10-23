@@ -254,7 +254,7 @@ export const stakePoolsWithHostnames: {
     hostname: 'stake.letsdoh.io',
   },
   {
-    stakePoolAddress: 'EQuYvFtX7FsWTkRDB1bCowMMTDTeQQ1XSLSD2qXbYZNo',
-    hostname: 'staking.pixelapes.xyz',
+    stakePoolAddress: 'E6Svu8eQyb7k8Z3KEn4RELDXDJSYws13pdbnX82xBke',
+    hostname: 'ogstaking.pixelapes.xyz',
   },
 ]
