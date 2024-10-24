@@ -49,7 +49,7 @@ function StakePoolHome(props: { stakePoolMetadataName: string | null }) {
   const [pane, setPane] = useState<PANE_OPTIONS>('dashboard')
   const stakePoolDisplayName = props.stakePoolMetadataName
     ? props.stakePoolMetadataName.replace(' Staking', '') + ' Staking'
-    : 'Pixel Apes NFT Staking'
+    : 'Pixel Apes OG NFT Staking'
 
   const { data: stakePoolMetadata } = useStakePoolMetadataCtx()
 
