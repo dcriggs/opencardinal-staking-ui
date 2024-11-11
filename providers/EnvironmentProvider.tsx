@@ -22,9 +22,9 @@ export const ENVIRONMENTS: Environment[] = [
   {
     label: 'mainnet-beta',
     primary:
-      'https://mainnet.helius-rpc.com/?api-key=06eac08e-6925-451f-99f3-b5f32b4d0a90',
+      'https://mainnet.helius-rpc.com/?api-key=25f6d3a1-eeaf-4983-aeb8-7c874feb477e',
     secondary:
-      'https://mainnet.helius-rpc.com/?api-key=06eac08e-6925-451f-99f3-b5f32b4d0a90',
+      'https://mainnet.helius-rpc.com/?api-key=25f6d3a1-eeaf-4983-aeb8-7c874feb477e',
   },
   {
     label: 'testnet',
